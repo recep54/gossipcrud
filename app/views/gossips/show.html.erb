@@ -1,0 +1,23 @@
+<h1>Vous estes dur le gossip number <%= params[:id] %></h1>
+
+<%= @gossip.user_id %>
+<%= @gossip.potin %>
+<p></p>
+
+<%= link_to 'Edit', edit_gossip_path(@gossip) %> |
+<%= link_to 'Back', gossips_path %>
+
+<h2>Commentaire</h2>
+
+<% @commentaire.each do |comment| %>
+<p> <%= comment.user_id %>
+ <%= comment.gossip_id %>
+ <%= comment.commentaire %></p>
+<% end %>
+
+<h2>Faire un commentaire</h2>
+
+
+
+
+<%= link_to 'Back', gossips_path %>
